@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>가입화면</title>
+		<script type="text/javascript">
+		const idtest = (t) =>{
+			console.log(document.getElementById("txt"));
+			console.log(t);
+			document.getElementById("copy").value = t.value;
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		<form >
+			<input type="text" value="아이디" id="id" oninput="idtest(this)"><br>
+			<input type="text" value="비밀번호" id="pwd"><br>
+			<input type="text" value="비밀번호 확인" id="pwdck"><br>
+			<input type="text" value="이름" id="name"><br>
+			<hr>
+			<button>등록</button>
+		
+		
+		</form>
+	</body>
+</html>
