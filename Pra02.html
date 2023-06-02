@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>문제02</title>
+		<style type="text/css">
+			#main{
+			margin: auto;
+			display : flex;
+			flex-direction: column;
+			}
+			#buttons{
+			margin: auto;
+			padding-bottom: 30px;
+			}
+			
+			#txt > h3{
+			text-align :center;
+			margin: auto;
+			background: yellow;
+			width : 100px; height: 100px;
+			}
+			
+			
+		</style>
+		
+		
+		
+		<script type="text/javascript">
+		
+		//실수 1. 버튼 생성 기증이 아니고 변화 기능으로 만듦
+		//실수 2. 지우고 나면 생성 못 함
+		//실수 3. 텍스트 정렬 귀찮아서 안 함
+		//무한 자동하면 페이지 멈춤
+		
+		
+		//버튼 1 생성
+		function add01(){
+			let btnBox = document.getElementById("txt1");
+			btnBox.style.background ="yellow";
+			//console.log(btnBox.value);
+			btnBox.innerText="버튼 1 클릭";	
+			//btnBox.innerHTML=mag;	
+			
+		}
+		
+		
+		//버튼 2 생성
+		function add02(){
+			let btnBox = document.getElementById("txt1");
+			//console.log(btnBox);
+			btnBox.style.background ="green";
+			//console.log(btnBox.value);
+			btnBox.innerText="버튼 2 클릭";	
+			//btnBox.innerHTML=mag;	
+			
+		}
+		//버튼 3 생성
+		function add03(){
+			let btnBox = document.getElementById("txt1");
+			//console.log(btnBox);
+			btnBox.style.background ="pink";
+			//console.log(btnBox.value);
+			btnBox.innerText="버튼 3 클릭";	
+			//btnBox.innerHTML=mag;	
+			
+		}
+		//자동
+		function auto(){
+			let btnBox = document.getElementById("txt1");
+			for(let i=1; i<=100; i++){
+				setTimeout(add02, 2000);
+				setTimeout(add03, 3000);	
+				setTimeout(add01, 4000);
+			}
+			
+		}
+		
+		//지우기
+		function remove(){
+			let remove = document.getElementById("txt");
+			console.log(txt.childNodes);
+			//document.querySelector("h3").remove();
+			remove.removechild(remove.childNodes[0]);
+			
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+		<div id = "main">
+			<div id = "buttons">
+				<input type="button" value="버튼1" id="btn1" onclick="add01()">
+				<input type="button" value="버튼2" id="btn2" onclick="add02()">
+				<input type="button" value="버튼3" id="btn3" onclick="add03()">
+				<input type="button" value="자동" id="autoBtn" onclick="auto()">
+				<input type="button" value="지우기" id="resetBtn" onclick="remove()">
+		
+			</div>
+				<div id="txt">
+					<h3 id ="txt1">버튼 1 클릭</h3>
+				</div>
+		</div>
+		
+	
+	</body>
+</html>
