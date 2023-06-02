@@ -11,6 +11,19 @@
 			
 		}
 		
+		function ok(){
+			window.open("success.html","","width=500, heigth=500");
+			const idck = document.getElementById("id");
+			
+			if(idck.vlaue !==0 ){
+				window.open("success.html","","width=500, heigth=500");
+			}
+		}
+		
+		//포커스 이동
+		//이동 후 아이디, 비밀번호 비었는지 체크
+		//비밀번호 일치하는 지 체크
+		
 		
 		</script>
 	</head>
@@ -21,7 +34,7 @@
 			<input type="text" value="비밀번호 확인" id="pwdck"><br>
 			<input type="text" value="이름" id="name"><br>
 			<hr>
-			<button>등록</button>
+			<button onclick="ok()">등록</button >
 		
 		
 		</form>
