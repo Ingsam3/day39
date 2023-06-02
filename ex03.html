@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>oninput</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+			function myFocus(){
+				document.getElementById("pwd").focus();
+				const txt = document.getElementById("txt");
+				document.getElementById("copy").value = txt.value;
+				
+			}
+			const test = (t) =>{
+				console.log(document.getElementById("txt"));
+				console.log(t);
+				document.getElementById("copy").value = t.value;
+				
+			}
+		
+		
+		
+		</script>
+		<input type="text" id="txt" oninput="test(this)"><br>
+		 <!-- oninput="test(this) :해당하는 키가 눌렸을 때 자기자신 태그에게 함수 실행 
+		 즉각적으로 반응
+		 -->
+		<input type="text" id="pwd"><br>
+		<input type="text" id="copy"><br>
+		<input type="button" onclick="myFocus()" value="click"><br>
+	
+	
+	</body>
+</html>

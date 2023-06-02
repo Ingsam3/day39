@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>입력방식</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function test(){
+				//alert("test 실행");//확인 누르면 해당 경로로 이동함
+				const fo = document.getElementById("fo");
+				console.log(fo);
+				console.log(fo.pwd1.value);
+				
+				const pwd =  document.getElementById("pwd2");
+				if(fo.pwd1.value === pwd2.value){
+					alert("일치");
+					fo.submit();
+				}else{
+					alert("잘못입력");
+				}
+			}
+		
+			function test1(){
+				location.href ='https://www.naver.com/';
+				
+			}
+		
+		//전송 안됨 2, 4
+		
+		
+		</script>
+		<form  id ="fo" action="ex03.html">
+			<input type="text" id="pwd1"><br>
+			<input type="text" id="pwd2"><br>
+			<!-- <input type="submit" value="전송" onclick="test()"><br>submit은 이동 보장 사용X -->
+			<input type="button" value="전송" onclick=" test()"><br><!-- button은 form 액션과 무관 -->
+		
+		</form>
+		
+		<button type="button" onclick="location.href='ex01.html'">이동</button>
+		<button type="button" onclick="location.href='ex02.html'">이동</button>
+	
+	
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Append</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		 var img;
+		 function add(){
+			 img = document.createElement("img");
+		 		img.src = "images/1.jpg";
+		 		img.width =100
+		 		img.style.hrigth ="100px";
+		 		//img.setAttribute("width",100); 
+		 		//img.setAttribute("heigth",100); 
+		 		//img.setAttribute("src","이미지 경로"); 
+		 		document.getElementById("test").appendChild(img); //appendChild=> 자식에 대해서 계속 추가하겠다
+		 		//document.getElementById("test").innerHTML=img;  => 하나만 추가, 그리고 텍스트요소
+		 }
+		
+		 function remove(){
+			 let item = document.querySelector("#test");
+			 console.log(item.childNodes);
+			 //document.querySelector("#test").remove(); //= >자기 자신 삭제 (아예 삭제라 추가 X)
+			 document.querySelector("img").remove(); // = > 이미지만 삭제
+			//items.removechild(item.childNodes[0]);//자식삭제
+			 
+		 }
+		
+		
+		</script>
+		<p id ="test">
+			<b>aaa</b>
+			<span>bbb</span>
+		
+		</p>
+		<a href="#" onclick="add()">[이미지추가]</a>
+		<a href="#" onclick="remove()">[이미지삭제]</a>
+		
+		
+	
+	
+	</body>
+</html>
